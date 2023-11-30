@@ -16,8 +16,7 @@ def rabin_karp(text, sub):
     
     
 def _get_hash_code(text):
-    hash = 0
+    text_hash = 0
     for e in text:
-        hash = (31*hash + ord(e))%(5)
-    return hash
-
+        text_hash = (31*text_hash + ord(e)) % 5
+    return text_hash

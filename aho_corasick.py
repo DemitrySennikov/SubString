@@ -1,4 +1,4 @@
-class BohrNode():
+class BohrNode:
     def __init__(self, parent, new_letter):
         self.sub = parent + new_letter
         self.parent = parent
@@ -10,7 +10,7 @@ class BohrNode():
 def aho_corasick(text, sub):
     if sub == '':
         return 0
-    bohr = _build_DFA(sub)
+    bohr = _build_dfa(sub)
     current = bohr['']
     for i in range(len(text)):
         e = text[i]
@@ -25,8 +25,8 @@ def aho_corasick(text, sub):
     return -1
             
     
-def _build_DFA(sub):
-    tree = {}
+def _build_dfa(sub):
+    tree = dict()
     tree[''] = BohrNode('', '')
     current = tree['']
     for e in sub:
@@ -40,5 +40,5 @@ def _build_DFA(sub):
                 break
             else:
                 current = tree[current.suffix]
-        current = tree[new_sub]
+        current = tree.get(new_sub)
     return tree

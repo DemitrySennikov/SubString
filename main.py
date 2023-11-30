@@ -5,6 +5,7 @@ from aho_corasick import aho_corasick
 from bmh import bmh
 from graphics import draw_all_graphs
 
+
 def main(text, sub):
     print(f"Searching '{sub}' in '{text}':")
     print("Brute Force:", brute_force(text, sub))

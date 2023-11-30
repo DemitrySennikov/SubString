@@ -9,6 +9,7 @@ from bmh import bmh
 from random import choice
 from string import ascii_letters
 
+
 class TestMethods(unittest.TestCase):
     def setUp(self):
         self.test_cases_with_sub = [('abc', 'abc'),
@@ -53,6 +54,7 @@ class TestMethods(unittest.TestCase):
 
     def test_bmh(self):
         self._method_testing(bmh)
+
 
 if __name__ == "__main__":
     unittest.main()

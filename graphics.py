@@ -13,7 +13,7 @@ from string import ascii_letters
 
 
 def draw_graphs(method):
-    y_time =  []
+    y_time = []
     y_memory = []
     x = [i for i in range(10000, 100001, 10000)]
 
@@ -52,8 +52,8 @@ def draw_graphs(method):
 
     plt.show()
 
+
 def draw_all_graphs():
     methods = [brute_force, rabin_karp, kmp, aho_corasick, bmh]
     for method in methods:
         draw_graphs(method)
-
