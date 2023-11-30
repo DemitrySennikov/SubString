@@ -15,7 +15,7 @@ def bmh(text, sub):
 
 
 def _shifts(sub):
-    shifts = {}
+    shifts = dict()
     for i in range(len(sub) - 1):
         shifts[sub[i]] = len(sub) - i - 1
     return shifts
