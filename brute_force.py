@@ -1,4 +1,4 @@
-def brut_force(text, sub):
+def brute_force(text, sub):
     n = len(text)
     s = len(sub)
     for start in range(n-s+1):

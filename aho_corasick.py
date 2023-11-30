@@ -7,7 +7,7 @@ class BohrNode():
         self.heirs = []
 
 
-def aho_korasik(text, sub):
+def aho_corasick(text, sub):
     if sub == '':
         return 0
     bohr = _build_DFA(sub)

@@ -11,17 +11,13 @@ def rabin_karp(text, sub):
             else:
                 return start
         elif start + s < n:
-            current_hash = _update_sub_hash(s, current_hash, 
-                                            text[start], text[start + s])
+            current_hash = _get_hash_code(text[start+1:start+s+1])
     return -1
     
     
 def _get_hash_code(text):
     hash = 0
     for e in text:
-        hash = 397*hash + ord(e)
+        hash = (31*hash + ord(e))%(5)
     return hash
 
-
-def _update_sub_hash(sub_len, hash, old_e, new_e):
-    return (hash - ((397 ** (sub_len-1))*ord(old_e)))*397 + ord(new_e)
